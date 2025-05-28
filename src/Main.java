@@ -1,15 +1,67 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Using if loop");
+        ifStatements(20);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("--------------------");
+
+        System.out.println("Using switch");
+        switchStatements(2);
+    }
+
+    public static void ifStatements(int age) {
+        // Check if person is old enough to drink
+        if (age < 18) {
+            System.out.println("Can't Drink Sorry! :(");
+        } else if (age > 18) {
+            System.out.println("Sure, Grab a drink");
+        } else {
+            System.out.println("Meh!! Do whatever you want, I don't care");
         }
     }
+
+    /**
+     * Determines the day of the week based on the given day number.
+     *
+     * @param day An integer representing the day of the week (1-7)
+     *            1 = Monday
+     *            2 = Tuesday
+     *            3 = Wednesday
+     *            4 = Thursday
+     *            5 = Friday
+     *            6 = Saturday
+     *            7 = Sunday
+     * @return void
+     */
+    public static void switchStatements(int day) {
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            case 3:
+                System.out.println("Wednesday");
+                break;
+
+            case 4:
+                System.out.println("Thursday");
+                break;
+
+            case 5:
+                System.out.println("Friday");
+                break;
+
+            case 6:
+                System.out.println("Saturday");
+                break;
+
+            default:
+                System.out.println("Invalid day");
+        }
+    }
+
 }
