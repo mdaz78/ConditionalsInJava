@@ -7,6 +7,9 @@ public class Main {
 
         System.out.println("Using switch");
         switchStatements(2);
+
+        System.out.println("Enhanced switch");
+        System.out.println(getQuarter("January"));
     }
 
     public static void ifStatements(int age) {
@@ -64,4 +67,13 @@ public class Main {
         }
     }
 
+    public static String getQuarter(String month) {
+        return switch (month.toLowerCase()) {
+            case "january", "february", "march" -> "First Quarter";
+            case "april", "may", "june" -> "Second Quarter";
+            case "july", "august", "september" -> "Third Quarter";
+            case "october", "november", "december" -> "Fourth Quarter";
+            default -> "Invalid month";
+        };
+    }
 }
