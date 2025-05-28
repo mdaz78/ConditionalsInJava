@@ -11,6 +11,9 @@ public class Main {
         System.out.println("Enhanced switch");
         System.out.println(getQuarter("January"));
         System.out.println(getQuarter("aoeu"));
+
+        System.out.println("Switch challenge");
+        System.out.println(natoChallenge("Car"));
     }
 
     public static void ifStatements(int age) {
@@ -68,6 +71,13 @@ public class Main {
         }
     }
 
+    /**
+     * Determines the quarter of the year based on the given month.
+     * Works with JDK 14 and above
+     *
+     * @param month A string representing the month
+     * @return A string representing the quarter of the year
+     */
     public static String getQuarter(String month) {
         return switch (month.toLowerCase()) {
             case "january", "february", "march" -> "First Quarter";
@@ -79,5 +89,41 @@ public class Main {
                 yield badResponse;
             }
         };
+    }
+
+    public static String natoChallenge(String word) {
+        String natoWord = "";
+        for (char c : word.toLowerCase().toCharArray()) {
+            natoWord += switch (c) {
+                case 'a' -> "Alfa";
+                case 'b' -> "Bravo";
+                case 'c' -> "Charlie";
+                case 'd' -> "Delta";
+                case 'e' -> "Echo";
+                case 'f' -> "Foxtrot";
+                case 'g' -> "Golf";
+                case 'h' -> "Hotel";
+                case 'i' -> "India";
+                case 'j' -> "Juliett";
+                case 'k' -> "Kilo";
+                case 'l' -> "Lima";
+                case 'm' -> "Mike";
+                case 'n' -> "November";
+                case 'o' -> "Oscar";
+                case 'p' -> "Papa";
+                case 'q' -> "Quebec";
+                case 'r' -> "Romeo";
+                case 's' -> "Sierra";
+                case 't' -> "Tango";
+                case 'u' -> "Uniform";
+                case 'v' -> "Victor";
+                case 'w' -> "Whiskey";
+                case 'x' -> "Xray";
+                case 'y' -> "Yankee";
+                case 'z' -> "Zulu";
+                default -> "Invalid character";
+            };
+        }
+        return natoWord;
     }
 }
