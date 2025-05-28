@@ -10,6 +10,7 @@ public class Main {
 
         System.out.println("Enhanced switch");
         System.out.println(getQuarter("January"));
+        System.out.println(getQuarter("aoeu"));
     }
 
     public static void ifStatements(int age) {
@@ -73,7 +74,10 @@ public class Main {
             case "april", "may", "june" -> "Second Quarter";
             case "july", "august", "september" -> "Third Quarter";
             case "october", "november", "december" -> "Fourth Quarter";
-            default -> "Invalid month";
+            default -> {
+                String badResponse = "Invalid month " + month;
+                yield badResponse;
+            }
         };
     }
 }
